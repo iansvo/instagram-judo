@@ -1,0 +1,41 @@
+.instagram-judo-feed.theme-default .feed-item {
+  background: #efefef;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  margin: 10px 0 30px;
+  opacity: 0;
+  padding: 16px;
+  visibility: hidden;
+  transform: translateY(-10%);
+  transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease-out; }
+  .instagram-judo-feed.theme-default .feed-item, .instagram-judo-feed.theme-default .feed-item:before, .instagram-judo-feed.theme-default .feed-item:after {
+    box-sizing: border-box; }
+  .instagram-judo-feed.theme-default .feed-item figcaption {
+    font-size: .8em;
+    padding-top: 1em; }
+    .instagram-judo-feed.theme-default .feed-item figcaption > span > span:first-child:not(:last-child) {
+      font-weight: bold; }
+    .instagram-judo-feed.theme-default .feed-item figcaption .tags {
+      font-style: italic;
+      margin-bottom: .5em; }
+
+.instagram-judo-feed.theme-default .feed-item,
+.instagram-judo-feed.theme-default .feed-column-width {
+  width: calc(100% - 10px); }
+
+@media (min-width: 640px) {
+  .instagram-judo-feed.theme-default[data-columns="4"] .feed-item,
+  .instagram-judo-feed.theme-default[data-columns="4"] .feed-column-width {
+    width: calc(50% - 10px); } }
+
+@media (min-width: 960px) {
+  .instagram-judo-feed.theme-default[data-columns="4"] .feed-item,
+  .instagram-judo-feed.theme-default[data-columns="4"] .feed-column-width {
+    width: calc(25% - 10px); } }
+
+.instagram-judo-feed.theme-default.masonry-loaded .feed-item {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); }
+  .instagram-judo-feed.theme-default.masonry-loaded .feed-item:hover {
+    transform: translateY(2.5%); }

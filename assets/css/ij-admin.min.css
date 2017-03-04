@@ -1,0 +1,35 @@
+.ij_row {
+  margin-bottom: 2rem;
+  margin-left: -2rem; }
+  .ij_row, .ij_row:before, .ij_row:after {
+    box-sizing: border-box; }
+  .ij_row:before, .ij_row:after {
+    content: " ";
+    display: table; }
+  .ij_row:after {
+    clear: both; }
+
+.ij_page-col {
+  float: left;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  width: 100%; }
+  .ij_page-col, .ij_page-col:before, .ij_page-col:after {
+    box-sizing: border-box; }
+
+@media (min-width: 768px) {
+  .ij_page-left {
+    width: 66.6666%; } }
+
+@media (min-width: 768px) {
+  .ij_page-right {
+    width: 33.3333%; } }
+
+.user_id-result {
+  background: #dedede;
+  border: 1px solid #cdcdcd;
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem; }
+  .user_id-result.generated {
+    display: block; }

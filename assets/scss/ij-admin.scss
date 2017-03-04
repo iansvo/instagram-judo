@@ -1,0 +1,40 @@
+@import '_includes';
+
+.ij_row {
+	@include border-box;
+	@include clearfix;
+	margin-bottom: 2rem;
+	margin-left: -2rem;
+}
+
+.ij_page-col {
+	@include border-box;
+	float: left;
+	margin-bottom: 2rem;
+	padding: 0 2rem;
+	width: 100%;
+}
+
+.ij_page-left {
+	@media (min-width: 768px) {
+		width: 66.6666%;
+	}
+}
+
+.ij_page-right {
+	@media (min-width: 768px) {
+		width: 33.3333%;
+	}
+}
+
+.user_id-result {
+	background: #dedede;
+	border: 1px solid #cdcdcd;
+	display: none;
+	margin-top: 2rem;
+	padding: 1rem;
+
+	&.generated {
+		display: block;
+	}
+}

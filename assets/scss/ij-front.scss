@@ -1,0 +1,68 @@
+@import '_includes';
+
+
+// Default theme
+
+.instagram-judo-feed.theme-default {
+
+	.feed-item {
+		@include border-box;
+		background: #efefef;
+		border: 1px solid #dedede;
+		border-radius: 8px;
+		margin: 10px 0 30px;
+		opacity: 0;
+		padding: 16px;
+		visibility: hidden;
+		transform: translateY(-10%);
+		transition: opacity 300ms ease,
+					visibility 300ms ease,
+					transform 300ms ease-out;	
+
+
+		figcaption {
+			font-size: .8em;
+			padding-top: 1em;
+
+			> span > span:first-child:not(:last-child) {
+				font-weight: bold;
+			}
+
+			.tags {
+				font-style: italic;
+				margin-bottom: .5em;
+			}
+		}
+	}
+
+	.feed-item,
+	.feed-column-width {
+		width: calc(100% - 10px);
+		
+	}
+	&[data-columns="4"] .feed-item,
+	&[data-columns="4"] .feed-column-width {
+		@media (min-width: 640px) {
+			width: calc(50% - 10px);
+		}
+
+		@media (min-width: 960px) {
+			width: calc(25% - 10px);
+		}
+	}
+
+
+	&.masonry-loaded {
+
+		.feed-item {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+
+			&:hover {
+				transform: translateY(2.5%);
+			}
+		}
+	}	
+
+}
